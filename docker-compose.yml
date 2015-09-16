@@ -1,0 +1,13 @@
+web:
+    image: node
+    ports:
+        - "4000:4000"
+    expose:
+        - "4000"
+    volumes:
+        - .:/var/www/html:ro
+    working_dir: "/var/www/html"
+    environment:
+        NODE_ENV: development
+        PORT: 4000
+    command: "npm start"
