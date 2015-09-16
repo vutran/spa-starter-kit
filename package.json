@@ -22,7 +22,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "react": "^0.13.3"
   },
   "start": "node server.js"
 }
