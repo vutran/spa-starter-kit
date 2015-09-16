@@ -8,6 +8,11 @@ Quick starter kit for booting up a NodeJS container with React, webpack.
 - NodeJS (Docker image)
 - webpack
 - ReactJS
+- Babel, ES6/2015
+- Sass
+- PostCSS
+ - Autoprefixer
+- ES Lint
 
 # Up and Running with Docker Compose
 
@@ -27,7 +32,7 @@ import React from 'react';
 /**
  * <HelloWorld />
  */
-class HelloWorld extends React.Component {
+export default class HelloWorld extends React.Component {
     /**
      * Constructor
      */
@@ -42,9 +47,6 @@ class HelloWorld extends React.Component {
         return <p>Hello, world!</p>;
     }
 }
-
-// Export the module
-module.exports = HelloWorld;
 ````
 
 ### Importing a React component
@@ -62,4 +64,4 @@ React.render(<HelloWorld />, mountNode);
 # TODO
 
 - Add React Hot Loader
-- Add html-loader
+- Move npm, and webpack into the Docker container

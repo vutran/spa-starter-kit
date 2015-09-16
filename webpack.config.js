@@ -1,5 +1,12 @@
+var webpack = require('webpack');
+
+// Import components
+var autoprefixer = require('autoprefixer');
+
 module.exports = {
-    entry: './app/index.js',
+    entry: [
+        './app/index.js',
+    ],
     output: {
         path: __dirname + '/dist',
         filename: 'bundle.js'
@@ -8,13 +15,28 @@ module.exports = {
         loaders: [
             {
                 test: /\.scss$/,
-                loaders: ['style', 'css', 'sass']
+                loaders: ['style', 'css', 'sass', 'postcss']
             },
             {
-                test: /\.js/,
+                test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel'
+                loaders: ['babel']
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loaders: ['eslint']
+            },
+            {
+                test: /\.html$/,
+                loader: 'html'
             }
         ]
+    },
+    eslint: {
+        parser: 'babel-eslint'
+    },
+    postcss: function() {
+        return [autoprefixer];
     }
 };
