@@ -11,6 +11,7 @@ app.use(express.static(__dirname + '/public'));
 app.use('/dist', express.static(__dirname + '/dist'));
 
 // Set the address/port
+var address = process.env.DOCKER_HOST || 'localhost';
 var port = process.env.PORT || 4000
 
 // Listen to the port
@@ -18,7 +19,7 @@ var server = app.listen(port, function(err, result) {
     if (err) {
         console.log(err);
     }
-  console.log('Running on port %s', port);
+  console.log('Running on http://%s:%s', address, port);
 });
 
 // ----- WEBPACK DEV SERVER
@@ -28,15 +29,22 @@ var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
 
+// Retrieve the webpack dev port
+var webpackDevPort = process.env.WEBPACK_DEV_PORT || 4001;
+
 new WebpackDevServer(webpack(config), {
     hot: true,
     historyApiFallback: true,
     proxy: {
         "*": "http://localhost:" + port
+    },
+    watchOptions: {
+        poll: 1000,
+        aggregateTimeout: 1000
     }
-}).listen(4001, 'localhost', function(err, result) {
+}).listen(webpackDevPort, function(err, result) {
     if (err) {
         console.log(err);
     }
-    console.log('webpack-dev-server running on port %s', 4001);
+    console.log('webpack-dev-server running on http://%s:%s', address, webpackDevPort);
 });

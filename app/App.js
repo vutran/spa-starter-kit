@@ -1,9 +1,9 @@
 import React from 'react';
 
 /**
- * <HelloWorld />
+ * <App />
  */
-export default class HelloWorld extends React.Component {
+export default class App extends React.Component {
     /**
      * Renders the component
      */

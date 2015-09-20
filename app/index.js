@@ -2,12 +2,12 @@
 import React from 'react';
 
 // Load components
-import HelloWorld from './components/HelloWorld.js';
+import App from './App.js';
 
 // Load the stylesheets
 import './styles/global.scss';
 
 React.render(
-    <HelloWorld />,
-    document.getElementById('content')
+    <App />,
+    document.getElementById('app')
 );
