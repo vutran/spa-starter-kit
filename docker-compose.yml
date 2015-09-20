@@ -2,8 +2,7 @@ web:
     image: node
     ports:
         - "4000:4000"
-    expose:
-        - "4000"
+        - "4001:4001"
     volumes:
         - .:/var/www/html
     working_dir: "/var/www/html"

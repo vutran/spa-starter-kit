@@ -53,7 +53,10 @@ import HelloWorld from './components/HelloWorld.js';
 React.render(<HelloWorld />, mountNode);
 ````
 
+### React Hot Loader
+
+This is currently only working if you run the app via `node server.js` and not yet working within the Docker integration.
+
 # TODO
 
-- Add React Hot Loader
-- Move npm, and webpack into the Docker container
+- Make React Hot Loader, webpack-dev-server work inside the Docker container

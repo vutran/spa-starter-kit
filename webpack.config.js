@@ -1,13 +1,16 @@
 // Import components
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
+var path = require('path');
 
 module.exports = {
     entry: [
-        './app/index.js',
+        'webpack-dev-server/client?http://0.0.0.0:4001',
+        'webpack/hot/only-dev-server',
+        path.join(__dirname, '/app/index.js'),
     ],
     output: {
-        path: __dirname + '/dist',
+        path: path.join(__dirname, '/dist'),
         filename: 'bundle.js'
     },
     module: {
@@ -19,7 +22,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loaders: ['babel']
+                loaders: ['react-hot', 'babel']
             },
             {
                 test: /\.js$/,
@@ -37,5 +40,8 @@ module.exports = {
     },
     postcss: function() {
         return [autoprefixer];
-    }
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ]
 };
