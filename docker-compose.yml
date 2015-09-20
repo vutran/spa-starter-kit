@@ -5,9 +5,9 @@ web:
     expose:
         - "4000"
     volumes:
-        - .:/var/www/html:ro
+        - .:/var/www/html
     working_dir: "/var/www/html"
     environment:
         NODE_ENV: development
         PORT: 4000
-    command: "npm start"
+    command: bash -c "npm install && npm start"

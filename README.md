@@ -1,4 +1,4 @@
-SPA Starter Kit (NodeJS, React, webpack)
+SPA Starter Kit (NodeJS, React, webpack, babel/ES6, Redux)
 =====
 
 Quick starter kit for booting up a NodeJS container with React, webpack.
@@ -13,12 +13,11 @@ Quick starter kit for booting up a NodeJS container with React, webpack.
 - PostCSS
  - Autoprefixer
 - ES Lint
+- Redux
 
 # Up and Running with Docker Compose
 
-````
-docker-compose up
-````
+You can simply boot up the Docker container by running `docker-compose up`. This will automatically download the required Docker images, and run through and install the required npm depedencies for your project, start the webpack bundler and the server.
 
 # React Components
 
@@ -33,13 +32,6 @@ import React from 'react';
  * <HelloWorld />
  */
 export default class HelloWorld extends React.Component {
-    /**
-     * Constructor
-     */
-    constructor(props) {
-        super(props);
-    }
-
     /**
      * Renders the component
      */

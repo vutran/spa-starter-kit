@@ -21,13 +21,15 @@
     "webpack-dev-server": "^1.11.0"
   },
   "scripts": {
+    "prestart": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.3",
-    "react": "^0.13.3"
-  },
-  "start": "node server.js"
+    "react": "^0.13.3",
+    "react-redux": "^2.1.2",
+    "redux": "^3.0.0"
+  }
 }

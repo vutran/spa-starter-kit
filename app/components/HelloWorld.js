@@ -5,13 +5,6 @@ import React from 'react';
  */
 export default class HelloWorld extends React.Component {
     /**
-     * Constructor
-     */
-    constructor(props) {
-        super(props);
-    }
-
-    /**
      * Renders the component
      */
     render() {
