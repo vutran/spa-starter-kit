@@ -1,14 +1,4 @@
 web:
-    image: node
-    ports:
-        - "4000:4000"
-        - "4001:4001"
-    volumes:
-        - .:/var/www/html
-    working_dir: "/var/www/html"
-    environment:
-        DOCKER_HOST: dockerhost
-        NODE_ENV: development
-        PORT: 4000
-        WEBPACK_DEV_PORT: 4001
-    command: bash -c "npm install && npm start"
+    extends:
+        file: ./docker/local.yml
+        service: web

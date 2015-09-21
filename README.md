@@ -1,14 +1,14 @@
-SPA Starter Kit (NodeJS, React, webpack, babel/ES6, Redux)
+SPA Starter Kit (NodeJS, React, webpack, babel/ES2015, Redux)
 =====
 
-Quick starter kit for booting up a NodeJS container with React, webpack.
+Quick starter kit for booting up a NodeJS container with React, webpack, babel/ES2015, Redux, and more.
 
 # Features
 
 - [Docker Node](https://hub.docker.com/_/node/)
 - [webpack](webpack.github.io)
 - [ReactJS](http://facebook.github.io/react/)
-- [Babel (ES/2015)](https://babeljs.io/)
+- [Babel (ES2015)](https://babeljs.io/)
 - [Sass](http://sass-lang.com/)
 - [PostCSS](https://github.com/postcss/postcss)
  - [Autoprefixer](https://github.com/postcss/autoprefixer)

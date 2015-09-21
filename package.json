@@ -1,8 +1,12 @@
 {
   "name": "spa-starter-kit",
   "version": "1.0.0",
-  "description": "Quick starter kit for booting up a NodeJS container with React, webpack.",
-  "main": "index.js",
+  "description": "Quick starter kit for booting up a NodeJS container with React, webpack, babel/ES2015, Redux, and more.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vutran/spa-starter-kit.git"
+  }
+  "main": "server.js",
   "devDependencies": {
     "autoprefixer": "^6.0.2",
     "babel-core": "^5.8.24",
@@ -22,10 +26,13 @@
     "webpack-dev-server": "^1.11.0"
   },
   "scripts": {
-    "prestart": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": {
+    "name": "Vu Tran",
+    "email": "vu@vu-tran.com",
+    "url": "http://vu-tran.com/"
+  },
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.3",

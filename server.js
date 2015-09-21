@@ -33,6 +33,7 @@ var config = require('./webpack.config');
 var webpackDevPort = process.env.WEBPACK_DEV_PORT || 4001;
 
 new WebpackDevServer(webpack(config), {
+    quiet: true,
     hot: true,
     historyApiFallback: true,
     proxy: {

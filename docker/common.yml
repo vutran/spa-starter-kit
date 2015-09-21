@@ -1,0 +1,6 @@
+web:
+    image: node
+    volumes:
+        - ../:/var/www/html
+    working_dir: "/var/www/html"
+    command: sh ./init.sh
