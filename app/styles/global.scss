@@ -3,9 +3,27 @@
 body {
     padding: 0px;
     margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #eaeaea;
 }
 
-h1 {
-    font-family: 'Roboto', sans-serif;
+a {
+    color: #999;
+}
+
+.intro {
+    margin-top: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    h1 {
+        font-weight: 600;
+        font-size: 40px;
+    }
+}
+
+.footnote {
+    font-size: 12;
     font-weight: 300;
+    margin-top: 100px;
 }
