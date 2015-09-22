@@ -10,7 +10,9 @@ var webpackCompiler = webpack(webpackConfig);
 var app = express();
 
 // Attach webpack-dev-middleware and webpack-hot-middleware
-app.use(webpackDevMiddleware(webpackCompiler));
+app.use(webpackDevMiddleware(webpackCompiler, {
+    noInfo: true
+}));
 app.use(webpackHotMiddleware(webpackCompiler));
 
 // Create static directories
