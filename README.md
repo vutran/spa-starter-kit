@@ -28,7 +28,7 @@ You can simply boot up the Docker container by running `docker-compose up`. This
 
 ## Access the URL
 
-The application will be accessible at [http://dockerhost:4001/](http://dockerhost:4001/).
+The application will be accessible at [http://dockerhost:4000/](http://dockerhost:4000/).
 
 # React Components
 
