@@ -5,7 +5,7 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:vutran/spa-starter-kit.git"
-  }
+  },
   "main": "server.js",
   "devDependencies": {
     "autoprefixer": "^6.0.2",
@@ -23,7 +23,8 @@
     "sass-loader": "^2.0.1",
     "style-loader": "^0.12.3",
     "webpack": "^1.12.1",
-    "webpack-dev-server": "^1.11.0"
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-hot-middleware": "^2.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

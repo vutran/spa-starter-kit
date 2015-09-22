@@ -5,8 +5,7 @@ var path = require('path');
 
 module.exports = {
     entry: [
-        'webpack-dev-server/client?http://0.0.0.0:4001',
-        'webpack/hot/only-dev-server',
+        'webpack-hot-middleware/client',
         path.join(__dirname, '/app/index.js'),
     ],
     output: {
@@ -46,6 +45,8 @@ module.exports = {
         return [autoprefixer];
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
     ]
 };
