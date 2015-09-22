@@ -1,4 +1,4 @@
-SPA Starter Kit (NodeJS, React, webpack, babel/ES2015, Redux)
+Single Page Application (SPA) Starter Kit (NodeJS, React, webpack, babel/ES2015, Redux, Hot Loader)
 =====
 
 Quick starter kit for booting up a NodeJS container with React, webpack, babel/ES2015, Redux, and more.
@@ -59,6 +59,9 @@ To render a React component, you will need to import the component before callin
 ````
 // Load components
 import App from './components/App.js';
+
+// Retrieve the "#app" element.
+var mountNode = document.getElementbyId('app');
 
 // Render the component
 React.render(<App />, mountNode);

@@ -12,8 +12,17 @@ module.exports = {
         path: path.join(__dirname, '/dist'),
         filename: 'bundle.js'
     },
+    devtool: "source-map",
     module: {
         loaders: [
+            {
+                test: /\.(ttf|eot|woff)(\?.*)?$/,
+                loaders: ['url']
+            },
+            {
+                test: /\.svg(\?.*)?$/,
+                loaders: ['url', 'svgo']
+            },
             {
                 test: /\.scss$/,
                 loaders: ['style', 'css', 'sass', 'postcss']

@@ -8,6 +8,6 @@ export default class App extends React.Component {
      * Renders the component
      */
     render() {
-        return <p>Hello, world!</p>;
+        return <h1>Congratulations!</h1>
     }
 }
