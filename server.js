@@ -11,7 +11,11 @@ var app = express();
 
 // Attach webpack-dev-middleware and webpack-hot-middleware
 app.use(webpackDevMiddleware(webpackCompiler, {
-    noInfo: true
+    noInfo: true,
+    watchOptions: {
+        aggregateTimeout: 1000,
+        poll: 1000
+    }
 }));
 app.use(webpackHotMiddleware(webpackCompiler));
 
