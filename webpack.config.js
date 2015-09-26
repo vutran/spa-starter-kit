@@ -1,6 +1,7 @@
 // Import components
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
+var postCssLocalScope = require('postcss-local-scope');
 var path = require('path');
 
 module.exports = {
@@ -51,7 +52,7 @@ module.exports = {
         parser: 'babel-eslint'
     },
     postcss: function() {
-        return [autoprefixer];
+        return [autoprefixer, postCssLocalScope];
     },
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),

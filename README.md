@@ -12,6 +12,7 @@ Quick starter kit for booting up a NodeJS container with React, webpack, babel/E
 - [Sass](http://sass-lang.com/)
 - [PostCSS](https://github.com/postcss/postcss)
  - [Autoprefixer](https://github.com/postcss/autoprefixer)
+ - [Local Scope](https://github.com/css-modules/postcss-modules-local-by-default)
 - [ES Lint](http://eslint.org/)
 - [Redux](http://rackt.github.io/redux/)
 - [React Hot Loader](http://gaearon.github.io/react-hot-loader/)
