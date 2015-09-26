@@ -4,9 +4,7 @@ web:
         service: web
     ports:
         - "4000:4000"
-        - "4001:4001"
     hostname: localhost
     environment:
         NODE_ENV: development
         PORT: 4000
-        WEBPACK_DEV_PORT: 4001
