@@ -38,12 +38,12 @@ React components should be created and placed inside of the `/app/components/` d
 For more information, please read the [React docs](http://facebook.github.io/react/docs/), or [ES6](https://babeljs.io/docs/learn-es2015/).
 
 ````
-import React from 'react';
+import React, { Component } from 'react';
 
 /**
  * <App />
  */
-export default class App extends React.Component {
+export default class App extends Component {
     /**
      * Renders the component
      */
@@ -59,7 +59,7 @@ To render a React component, you will need to import the component before callin
 
 ````
 // Load components
-import App from './components/App.js';
+import App from './components/App';
 
 // Retrieve the "#app" element.
 var mountNode = document.getElementbyId('app');
@@ -67,3 +67,19 @@ var mountNode = document.getElementbyId('app');
 // Render the component
 React.render(<App />, mountNode);
 ````
+
+# Redux Implementation
+
+### Actions and Action Creators
+
+You can place all your action types and action creator functions in the `app/actions/index.js` file.
+
+### Reducers
+
+Reducer functions should be stored in the `app/reducers/` directory. Once your reducer is created, you can combine them with the root reducer that is found in the `app/reducers/index.js` file.
+
+# TODOs
+
+- Added [Redux DevTools](https://github.com/gaearon/redux-devtools)
+- Refactor components to more reusable (container components)
+- Improve on the Redux implementation

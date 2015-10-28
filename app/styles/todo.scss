@@ -1,0 +1,28 @@
+.todoList {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.todoItem {
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.todoField {
+    float: left;
+    width: 80%;
+    height: 32px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+.todoBtn {
+    width: 15%;
+    height: 32px;
+    float: right;
+    background-color: #aaa;
+    color: #ccc;
+    border: 1px solid #aaa;
+}

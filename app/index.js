@@ -1,13 +1,21 @@
 // Import modules
 import React from 'react';
+import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 // Load components
-import App from './App.js';
+import App from './components/App';
 
-// Load the stylesheets
-import './styles/global.scss';
+// Import reducers
+import rootReducer from './reducers/index';
 
-React.render(
-    <App />,
+// Create the store
+let store = createStore(rootReducer);
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
     document.getElementById('app')
 );
