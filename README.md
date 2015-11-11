@@ -15,6 +15,7 @@ Quick starter kit for booting up a NodeJS container with React, webpack, babel/E
  - [Local Scope](https://github.com/css-modules/postcss-modules-local-by-default)
 - [ES Lint](http://eslint.org/)
 - [Redux](http://rackt.github.io/redux/)
+- [Redux DevTools](https://github.com/gaearon/redux-devtools)
 - [React Hot Loader](http://gaearon.github.io/react-hot-loader/)
 
 # Up and Running with Docker
@@ -80,6 +81,5 @@ Reducer functions should be stored in the `app/reducers/` directory. Once your r
 
 # TODOs
 
-- Added [Redux DevTools](https://github.com/gaearon/redux-devtools)
 - Refactor components to more reusable (container components)
 - Improve on the Redux implementation

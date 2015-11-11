@@ -7,6 +7,7 @@ import { addTodo } from '../actions';
 
 // Import components
 import TodoList from './TodoList';
+import TodoAddForm from './TodoAddForm';
 
 // Import stylesheets
 import styles from '../styles/global.scss';
@@ -27,7 +28,8 @@ class App extends Component {
                 <p>To get started, visit the <a href="http://facebook.github.io/react/" target="_blank">ReactJS</a> website.</p>
                 <div className={styles.todoContainer}>
                     <h3>SAMPLE APP</h3>
-                    <TodoList data={data} onAddTodo={name => dispatch(addTodo(name))} />
+                    <TodoList data={data} />
+                    <TodoAddForm onAddTodo={name => dispatch(addTodo(name))} />
                 </div>
                 <h2 className={styles.footnote}>Got a feedback or suggestion to this starter kit? <a href="https://github.com/vutran/spa-starter-kit/issues" target="_blank">Post on GitHub.</a></h2>
             </div>

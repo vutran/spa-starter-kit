@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 
 // Import components
 import TodoItem from './TodoItem';
-import TodoAddForm from './TodoAddForm';
 
 // Import styles
 import styles from '../styles/todo.scss';
@@ -13,24 +12,10 @@ import styles from '../styles/todo.scss';
 export default class TodoList extends Component {
     render() {
         return (
-            <div>
-                <ol className={styles.todoList}>
-                    {this.getTodoItemNodes()}
-                </ol>
-                <TodoAddForm onAddTodo={this.handleAddTodo.bind(this)} />
-            </div>
+            <ol className={styles.todoList}>
+                {this.getTodoItemNodes()}
+            </ol>
         );
-    }
-
-    /**
-     * Handles the onAddTodo prop callback
-     *
-     * @param string name
-     * @return void
-     */
-    handleAddTodo(name) {
-        // Pass it up the tree
-        this.props.onAddTodo(name);
     }
 
     /**
@@ -47,8 +32,3 @@ export default class TodoList extends Component {
         return nodes;
     }
 }
-
-// Define the prop types
-TodoList.propTypes = {
-    onAddTodo : PropTypes.func.isRequired
-};
