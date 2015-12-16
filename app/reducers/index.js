@@ -5,7 +5,7 @@ import data from './data'
 
 // Combine all reducers
 const rootReducer = combineReducers({
-    data
+  data
 })
 
 export default rootReducer

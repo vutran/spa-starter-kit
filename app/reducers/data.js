@@ -3,8 +3,8 @@ import { ADD_TODO } from '../actions/index'
 
 // The initial state
 const intialState = [
-    { name: 'Learn ReactJS' },
-    { name: 'Research Flux and Redux' }
+  { name: 'Learn ReactJS' },
+  { name: 'Research Flux and Redux' }
 ]
 
 /**
@@ -15,13 +15,13 @@ const intialState = [
  * @return array
  */
 export default function data(state = intialState, action) {
-    switch (action.type) {
-        case ADD_TODO:
-            return [
-                ...state,
-                { name: action.name }
-            ]
-        default:
-            return state
-    }
+  switch (action.type) {
+    case ADD_TODO:
+      return [
+        ...state,
+        { name: action.name }
+      ]
+    default:
+      return state
+  }
 }

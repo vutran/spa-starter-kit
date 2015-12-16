@@ -5,6 +5,3 @@ web:
     ports:
         - "4000:4000"
     hostname: localhost
-    environment:
-        NODE_ENV: development
-        PORT: 4000

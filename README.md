@@ -16,20 +16,37 @@ Quick starter kit for booting up a NodeJS container with React, webpack, babel/E
 - [Redux](http://rackt.github.io/redux/)
 - [Redux DevTools](https://github.com/gaearon/redux-devtools)
 - [React Hot Loader](http://gaearon.github.io/react-hot-loader/)
+- [Hot Reload Server](https://github.com/vutran/hot-reload-server)
+- [dotenv](https://github.com/motdotla/dotenv)
 
-# Up and Running with Docker
+# Quickstart Guide
 
-## Update your `/etc/hosts` file
+Clone the repository.
 
-You need to add `dockerhost` to your hosts file and point that to your Docker host.
+`git clone git@github.com:vutran/spa-starter-kit.git`
 
-## Run with Docker Compose
+Switch to project directory.
 
-You can simply boot up the Docker container by running `docker-compose up`. This will automatically download the required Docker images, and run through and install the required npm depedencies for your project, start the webpack bundler and the server.
+`cd spa-starter-kit`
 
-## Access the URL
+Boot up with Docker.
 
-The application will be accessible at [http://dockerhost:4000/](http://dockerhost:4000/).
+`docker-compose up`
+
+Open the URL in your browser.
+
+***Note: You need to add `dockerhost` to your `/etc/hosts` file and point that to your Docker machine's address.***
+
+[http://dockerhost:4000](http://dockerhost:4000)
+
+# Environmental Variables
+
+You can manage your environmental variables via the `.env` file.
+
+````
+NODE_ENV=development
+DOCKER_HOST=192.168.99.100
+````
 
 # React Components
 
@@ -37,7 +54,7 @@ React components should be created and placed inside of the `/app/components/` d
 
 For more information, please read the [React docs](http://facebook.github.io/react/docs/), or [ES6](https://babeljs.io/docs/learn-es2015/).
 
-````
+````javascript
 import { Component } from 'react'
 
 export default class MyComponent extends Component {
@@ -51,7 +68,7 @@ export default class MyComponent extends Component {
 
 To render a React component, you will need to import the component before calling [`React.render()`](http://facebook.github.io/react/docs/top-level-api.html#react.render)
 
-````
+````javascript
 import ReactDOM from 'react-dom'
 import MyComponent from './component/MyComponent'
 
@@ -66,13 +83,8 @@ ReactDOM.render(
 
 ### Actions and Action Creators
 
-You can place all your action types and action creator functions in the `app/actions/index.js` file.
+You can place all your Action Types and Action Creators in the `app/actions/index.js` file.
 
 ### Reducers
 
 Reducer functions should be stored in the `app/reducers/` directory. Once your reducer is created, you can combine them with the root reducer that is found in the `app/reducers/index.js` file.
-
-# TODOs
-
-- Refactor components to more reusable (container components)
-- Improve on the Redux implementation
