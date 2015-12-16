@@ -7,7 +7,7 @@ require('dotenv').load()
 
 // create the server
 const hrs = hotReloadServer(webpackConfig, {
-	publicPath: '/dist'
+  publicPath: '/dist'
 })
 
 // start the server

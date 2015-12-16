@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 
-// Import	components/containers
+// Import  components/containers
 import Root from './containers/Root'
 
 // Import stores/reducers
@@ -15,5 +15,5 @@ const store = configureStore()
 
 ReactDOM.render(
   <Root store={store} />,
-	document.getElementById('app')
+  document.getElementById('app')
 )
