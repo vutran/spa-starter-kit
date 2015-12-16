@@ -12,7 +12,6 @@ Quick starter kit for booting up a NodeJS container with React, webpack, babel/E
 - [Sass](http://sass-lang.com/)
 - [PostCSS](https://github.com/postcss/postcss)
  - [Autoprefixer](https://github.com/postcss/autoprefixer)
- - [Local Scope](https://github.com/css-modules/postcss-modules-local-by-default)
 - [ES Lint](http://eslint.org/)
 - [Redux](http://rackt.github.io/redux/)
 - [Redux DevTools](https://github.com/gaearon/redux-devtools)
@@ -39,17 +38,11 @@ React components should be created and placed inside of the `/app/components/` d
 For more information, please read the [React docs](http://facebook.github.io/react/docs/), or [ES6](https://babeljs.io/docs/learn-es2015/).
 
 ````
-import React, { Component } from 'react';
+import { Component } from 'react'
 
-/**
- * <App />
- */
-export default class App extends Component {
-    /**
-     * Renders the component
-     */
+export default class MyComponent extends Component {
     render() {
-        return <p>Hello, world!</p>;
+        return <p>Hello, world!</p>
     }
 }
 ````
@@ -59,14 +52,14 @@ export default class App extends Component {
 To render a React component, you will need to import the component before calling [`React.render()`](http://facebook.github.io/react/docs/top-level-api.html#react.render)
 
 ````
-// Load components
-import App from './components/App';
-
-// Retrieve the "#app" element.
-var mountNode = document.getElementbyId('app');
+import ReactDOM from 'react-dom'
+import MyComponent from './component/MyComponent'
 
 // Render the component
-React.render(<App />, mountNode);
+ReactDOM.render(
+  <MyComponent />,
+  document.getElementbyId('app')
+)
 ````
 
 # Redux Implementation

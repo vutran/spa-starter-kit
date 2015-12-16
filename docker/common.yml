@@ -1,5 +1,5 @@
 web:
-    image: node
+    image: node:5.2.0
     volumes:
         - ../:/var/www/html
     working_dir: "/var/www/html"

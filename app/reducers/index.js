@@ -1,11 +1,11 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
 
 // Import all reducers
-import data from './data';
+import data from './data'
 
 // Combine all reducers
 const rootReducer = combineReducers({
     data
-});
+})
 
-export default rootReducer;
+export default rootReducer

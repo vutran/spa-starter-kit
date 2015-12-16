@@ -1,16 +1,16 @@
 // Import React/redux
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 // Import actions
-import { addTodo } from '../actions';
+import { addTodo } from '../actions'
 
 // Import components
-import TodoList from './TodoList';
-import TodoAddForm from './TodoAddForm';
+import TodoList from '../components/TodoList'
+import TodoAddForm from '../components/TodoAddForm'
 
 // Import stylesheets
-import styles from '../styles/global.scss';
+import styles from '../styles/global.scss'
 
 /**
  * <App />
@@ -20,7 +20,7 @@ class App extends Component {
      * Renders the component
      */
     render() {
-        const { data, dispatch } = this.props;
+        const { data, dispatch } = this.props
         return (
             <div className={styles.intro}>
                 <h1>Congratulations!</h1>
@@ -33,7 +33,7 @@ class App extends Component {
                 </div>
                 <h2 className={styles.footnote}>Got a feedback or suggestion to this starter kit? <a href="https://github.com/vutran/spa-starter-kit/issues" target="_blank">Post on GitHub.</a></h2>
             </div>
-        );
+        )
     }
 }
 
@@ -49,4 +49,4 @@ function select(state) {
     }
 }
 
-export default connect(select)(App);
+export default connect(select)(App)

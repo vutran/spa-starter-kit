@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react'
 
 // Import styles
-import styles from '../styles/todo.scss';
+import styles from '../styles/todo.scss'
 
 /**
  * <TodoAddForm />
@@ -13,7 +13,7 @@ export default class TodoAddForm extends Component {
                 <input className={styles.todoField} type="text" placeholder="Enter a task..." ref="todoField" />
                 <button className={styles.todoBtn} type="button">Add</button>
             </form>
-        );
+        )
     }
 
     /**
@@ -23,16 +23,16 @@ export default class TodoAddForm extends Component {
      * @return void
      */
     handleSubmit(e) {
-        e.preventDefault();
-        const name = this.refs.todoField.value;
+        e.preventDefault()
+        const name = this.refs.todoField.value
         // Calls the prop function and pass the action
-        this.props.onAddTodo(name);
+        this.props.onAddTodo(name)
         // Reset the field
-        this.refs.todoField.value = '';
+        this.refs.todoField.value = ''
     }
 }
 
 // Define the prop types
 TodoAddForm.propTypes = {
     onAddTodo : PropTypes.func.isRequired
-};
+}

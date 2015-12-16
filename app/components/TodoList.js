@@ -1,10 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react'
 
 // Import components
-import TodoItem from './TodoItem';
+import TodoItem from './TodoItem'
 
 // Import styles
-import styles from '../styles/todo.scss';
+import styles from '../styles/todo.scss'
 
 /**
  * <TodoList />
@@ -15,7 +15,7 @@ export default class TodoList extends Component {
             <ol className={styles.todoList}>
                 {this.getTodoItemNodes()}
             </ol>
-        );
+        )
     }
 
     /**
@@ -27,8 +27,8 @@ export default class TodoList extends Component {
         const nodes = this.props.data.map(function(item, key) {
             return (
                 <TodoItem key={key}>{item.name}</TodoItem>
-            );
-        });
-        return nodes;
+            )
+        })
+        return nodes
     }
 }

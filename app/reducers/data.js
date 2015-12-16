@@ -1,11 +1,11 @@
 // Import action types
-import { ADD_TODO } from '../actions/index';
+import { ADD_TODO } from '../actions/index'
 
 // The initial state
 const intialState = [
     { name: 'Learn ReactJS' },
     { name: 'Research Flux and Redux' }
-];
+]
 
 /**
  * This is the reducer function for the "data" property in our application's state tree
@@ -20,8 +20,8 @@ export default function data(state = intialState, action) {
             return [
                 ...state,
                 { name: action.name }
-            ];
+            ]
         default:
-            return state;
+            return state
     }
 }
