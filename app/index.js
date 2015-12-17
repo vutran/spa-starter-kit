@@ -1,14 +1,13 @@
-// Import modules
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
 
-// Import react-todo
-import { Root, configureStore, rootReducer } from 'react-todo'
+// Import the app boilerplate
+import { Root, configureStore, rootReduce } from 'react-todo'
 
-// Import store
+// Create the store
 const store = configureStore()
 
+// Render to the #app element
 ReactDOM.render(
   <Root store={store} />,
   document.getElementById('app')

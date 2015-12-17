@@ -81,6 +81,8 @@ ReactDOM.render(
 
 # Redux Implementation
 
+For more information, please refer to the [demo application boilerplate](https://github.com/vutran/react-todo).
+
 ### Actions and Action Creators
 
 You can place all your Action Types and Action Creators in the `app/actions/index.js` file.
