@@ -3,14 +3,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 
-// Import  components/containers
-import Root from './containers/Root'
+// Import react-todo
+import { Root, configureStore, rootReducer } from 'react-todo'
 
-// Import stores/reducers
-import configureStore from './store/configure'
-import rootReducer from './reducers/index'
-
-// Create the store
+// Import store
 const store = configureStore()
 
 ReactDOM.render(
