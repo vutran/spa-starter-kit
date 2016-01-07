@@ -23,6 +23,7 @@
     "json-loader": "^0.5.4",
     "node-sass": "^3.4.2",
     "postcss-loader": "^0.8.0",
+    "react-hot-loader": "^1.2.8",
     "react-todo": "^0.0.22",
     "redux-devtools": "^3.0.0",
     "redux-devtools-dock-monitor": "^1.0.1",
